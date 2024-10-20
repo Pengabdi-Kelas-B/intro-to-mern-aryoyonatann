@@ -16,7 +16,7 @@ async function fetchPokemon() {
   }
 }
 
-// Fungsi untuk mengubah tipe Pokémon menjadi warna tertentu
+// Function untuk mengubah tipe Pokemon menjadi warna tertentu
 function getColorForType(type) {
   const typeColors = {
     grass: "green",
@@ -30,10 +30,9 @@ function getColorForType(type) {
     dark: "gray",
     fairy: "pink",
   };
-  return typeColors[type] || "gray"; // Menggunakan warna abu-abu jika tipe tidak dikenali
+  return typeColors[type] || "gray";
 }
 
-// Komponen kartu Pokémon yang diperbarui dengan animasi lebih halus
 function PokemonCard(props) {
   return React.createElement(
     "div",
@@ -82,7 +81,6 @@ function PokemonCard(props) {
   );
 }
 
-// Komponen daftar Pokémon dengan tata letak grid yang diperbarui
 function PokemonList() {
   if (pokemonData.length === 0) {
     return React.createElement(
@@ -109,7 +107,6 @@ function PokemonList() {
   );
 }
 
-// Komponen aplikasi dengan perubahan warna dan animasi lebih baik
 function App() {
   return React.createElement(
     "div",
@@ -122,7 +119,7 @@ function App() {
         {
           className:
             "text-7xl font-bold text-yellow-300 drop-shadow-xl animate-pulse",
-        }, // Animasi berdenyut pada teks judul
+        }, // Efek animasi
         "Pokédex"
       ),
       React.createElement(
@@ -130,7 +127,7 @@ function App() {
         { className: "relative mt-6 mb-6" },
         React.createElement("div", {
           className: "absolute inset-0 border-t-4 border-yellow-600",
-        }), // Garis pemisah lebih tebal
+        }), // Garis pemisah
         React.createElement("div", { className: "border-t-4 border-gray-600" })
       )
     ),
@@ -138,7 +135,7 @@ function App() {
   );
 }
 
-// Fungsi untuk merender aplikasi
+// Function untuk merender aplikasi
 function renderApp() {
   ReactDOM.render(React.createElement(App), document.getElementById("root"));
 }
