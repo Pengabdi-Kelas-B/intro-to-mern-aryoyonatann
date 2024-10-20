@@ -38,21 +38,21 @@ function PokemonCard(props) {
     "div",
     {
       className:
-        "bg-gradient-to-r from-blue-900 via-purple-800 to-indigo-700 border-4 border-indigo-500 rounded-2xl shadow-lg p-5 m-3 text-center max-w-sm transition-all transform hover:scale-105 hover:shadow-2xl hover:border-pink-500", // Gradien latar belakang dengan transisi hover
+        "bg-gradient-to-r from-blue-900 via-purple-800 to-indigo-700 border-4 border-indigo-500 rounded-2xl shadow-lg p-5 m-3 text-center max-w-sm transition-all transform hover:scale-105 hover:shadow-2xl hover:border-pink-500",
     },
     React.createElement(
       "div",
       { className: "overflow-hidden mb-3" },
       React.createElement("img", {
         className:
-          "w-full max-h-40 object-contain transition-transform duration-300 hover:rotate-6", // Efek rotasi lebih dramatis saat di-hover
+          "w-full max-h-40 object-contain transition-transform duration-300 hover:rotate-6",
         src: props.image,
         alt: props.name,
       })
     ),
     React.createElement(
       "h2",
-      { className: "text-4xl font-bold text-yellow-300 mb-2 drop-shadow-lg" }, // Teks lebih besar dan berwarna kuning
+      { className: "text-4xl font-bold text-yellow-300 mb-2 drop-shadow-lg" },
       props.name
     ),
     React.createElement(
@@ -71,7 +71,7 @@ function PokemonCard(props) {
                 type
               )}-600 rounded-lg hover:bg-${getColorForType(
                 type
-              )}-800 transition duration-300 transform hover:scale-110`, // Lencana dengan warna yang dinamis
+              )}-800 transition duration-300 transform hover:scale-110`,
             },
             type
           )
@@ -94,7 +94,7 @@ function PokemonList() {
     "div",
     {
       className:
-        "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6", // Lebih banyak kartu per baris pada layar yang lebih besar
+        "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6",
     },
     pokemonData.map((pokemon) =>
       React.createElement(PokemonCard, {
